@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FickSweeper</string>
+    <string name="msg_lose">You Lose!</string>
+    <string name="msg_win">You Win!</string>
+    <string name="empty_str" />
+    <string name="play_ficksweeper">Play FickSweeper!</string>
+    <string name="flag_mode">Flag Mode</string>
+    <string name="new_game">New Game</string>
+    <string name="size_of_board">Size of Board</string>
+    <string name="flags_txt">Flags</string>
+    <string-array name="sizes_array">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>

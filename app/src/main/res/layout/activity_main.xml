@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <hu.ait.minesweeper.view.MinesweeperView
+        android:id="@+id/minesweeperView"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/play_ficksweeper"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/minesweeperView"
+        app:layout_constraintStart_toStartOf="@+id/minesweeperView" />
+
+    <CheckBox
+        android:id="@+id/flagModeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:checkable="true"
+        android:checked="false"
+        android:text="@string/flag_mode"
+        app:layout_constraintStart_toStartOf="@+id/minesweeperView"
+        app:layout_constraintTop_toBottomOf="@+id/minesweeperView" />
+
+    <TextView
+        android:id="@+id/tvGameResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/empty_str"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizesSpinner" />
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/new_game"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGameResult" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <Spinner
+        android:id="@+id/sizesSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/flagModeCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/size_of_board"
+        app:layout_constraintStart_toStartOf="@+id/sizesSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/flagModeCheckBox" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="@+id/minesweeperView"
+        app:layout_constraintTop_toBottomOf="@+id/minesweeperView"
+        app:srcCompat="@drawable/newflag" />
+
+    <TextView
+        android:id="@+id/tvFlags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="@string/flags_txt"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tvFlagCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFlags"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
