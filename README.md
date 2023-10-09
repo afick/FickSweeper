@@ -10,4 +10,4 @@ To run, simply press play on the emulator in Android Studio, and have fun!
 
 ### Example Screen 
 
-![](app/src/main/res/drawable/Screenshot_20231009_224715.png)
+![](app/src/main/res/drawable/screenshot.png)
